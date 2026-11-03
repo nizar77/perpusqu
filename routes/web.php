@@ -4,10 +4,17 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app1');
 });
 
-Route::get('/depan', function () {
-    return view('dashboard.index')->name('dashboard');
+Route::get('/data-siswa', function () {
+    return view('siswa.index');
 });
-Route::get('/kategori',[KategoriController::class, 'index']);
+
+
+Route::get('/depan', function () {
+    return view('dashboard.index');
+});
+// Route::get('/kategori', [KategoriController::class, 'index']);
+// Route::resource('kategori', KategoriController::class);
+Route::resource('kategori', KategoriController::class)->except(['create', 'show', 'edit']);

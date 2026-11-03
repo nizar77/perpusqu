@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('karyawan', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_lengkap', 100);
             $table->foreignId('user_id')->unique()->constrained('users')->cascadeOnDelete();
             $table->string('nip', 30)->unique()->nullable();
             $table->string('jabatan', 50)->default('Pustakawan'); // Contoh: Kepala Perpustakaan, Staf Administrasi
-            $table->string('phone_number', 20)->nullable();
+            $table->string('no_hp', 20)->nullable();
             $table->timestamps();
         });
     }
