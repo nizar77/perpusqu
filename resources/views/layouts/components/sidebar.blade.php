@@ -67,7 +67,7 @@
                 </a>
 
                 <!-- Link 2: Katalog (Active State) -->
-                <a href="#" aria-current="page"
+                <a href="{{ url('buku') }}" aria-current="page"
                     class="group relative flex items-center gap-space-sm px-space-md py-space-sm bg-primary-container text-on-primary font-bold rounded-lg shadow-sm transition-all font-label-lg text-label-lg"
                     :class="{ 'lg:justify-center lg:px-0': sidebarCollapsed }">
                     <span class="material-symbols-outlined shrink-0 text-[22px]">auto_stories</span>
@@ -122,7 +122,20 @@
                     </div>
                 </a>
 
-                 <a href="#"
+                <a href="{{ url('jurusan') }}"
+                    class="group relative flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg"
+                    :class="{ 'lg:justify-center lg:px-0': sidebarCollapsed }">
+                    <span class="material-symbols-outlined shrink-0 text-[22px]">query_stats</span>
+                    <span class="whitespace-nowrap transition-opacity duration-300"
+                        :class="{ 'lg:hidden': sidebarCollapsed }">Jurusan</span>
+
+                    <div x-show="sidebarCollapsed"
+                        class="hidden lg:block absolute left-full ml-3 px-3 py-1.5 bg-inverse-surface text-inverse-on-surface text-label-md rounded-md shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 whitespace-nowrap">
+                        jurusan
+                    </div>
+                </a>
+
+                 <a href="{{ url('kategori') }}"
                     class="group relative flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg"
                     :class="{ 'lg:justify-center lg:px-0': sidebarCollapsed }">
                     <span class="material-symbols-outlined shrink-0 text-[22px]">query_stats</span>

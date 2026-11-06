@@ -17,7 +17,7 @@
         </button>
     </div>
 
-   {{-- <x-badge /> --}}
+  
 
     <!-- Tabel Data Kategori -->
     <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden shadow-sm">

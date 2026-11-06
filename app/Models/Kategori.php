@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class Kategori extends Model
 {
-    protected $fillable = ['kategori', 'slug_kategori', 'deskripsi'];
+    protected $fillable = ['nama_kategori', 'slug_kategori', 'deskripsi'];
 
     protected static function boot()
     {
